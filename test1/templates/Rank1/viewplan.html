@@ -1,0 +1,49 @@
+{% extends "main.html" %}
+{% block main1 %}
+    {% load staticfiles %}
+            <div class="row" style="padding: 1%">
+                <div class="col-md-4">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">설명</h3>
+                        </div>
+                    <img  src="{% static "img/knn1.png" %}"style="width:534px;height:300px;"/>
+                    <img src="{% static "img/knn2.png" %}"style="width:534px;height:200px;"/>
+                    <ul class="list-group">
+                        <li class="list-group-item">Predicted model accuracy: 71%</li>
+                        <li class="list-group-item">MDD : -48.5%</li>
+                        <li class="list-group-item">CAGR : 6.58%</li>
+                        <li class="list-group-item">For next Month:Do Invest</li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">설명</h3>
+                    </div>
+                    <img src="{% static "img/ampaa1.png" %}"style="width:534px;height:300px;" />
+                    <img src="{% static "img/ampaa2.png" %}"style="width:534px;height:200px;" />
+                        <ul class="list-group">
+                            <li class="list-group-item">Predicted model accuracy: 71%</li>
+                            <li class="list-group-item">MDD : -13.0%</li>
+                            <li class="list-group-item">CAGR : 12.5%</li>
+                        </ul>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">설명</h3>
+                    </div>
+                <img src="{% static "img/mpaa.png" %}"style="width:534px;height:300px;" />
+
+                <img src="{% static "img/mpaa2.png" %}"style="width:534px;height:200px;" />
+                    <ul class="list-group">
+                        <li class="list-group-item">국가개수:5</li>
+                        <li class="list-group-item">섹터개수:10</li>
+                        <li class="list-group-item">팩터개수:4</li>
+                        <li class="list-group-item">채권개수:1</li>
+                        <li class="list-group-item">현금개수:1</li>
+                        <li class="list-group-item">MDD : -3.93%</li>
+                        <li class="list-group-item">CAGR : 8.23%</li>
+                    </ul>
+            </div>
+    </div>
+{% endblock main1 %}

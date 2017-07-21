@@ -1,0 +1,42 @@
+{% extends "main.html" %}
+{% block main1 %}
+    <body style="padding: 1%">
+    <h3>뉴스검색</h3>
+    <form id="user-reg-form" action="newsview" method="post">
+        {% csrf_token %}
+        {{ form.Search }}
+        <p><input type="submit" class="btn btn-default" value="검색"></p>
+    </form>
+    {% if documents %}
+        <ul class="list-group" >
+            {% for document in documents %}
+                <li class="list-group-item"><a href={{ document.url}}><img src={{ document.jpgurl}}></a><a class="focus" href={{ document.url}} font size="6" >{{ document.harder}}</a><br/>
+                    <h4>{{ document.value}}</h4>
+                    {% if document.date %}
+                        <h6>{{ document.newscompany}} {{ document.date}} {{ document.time}}</h6>
+                    {% else %}
+                        <h6>{{ document.newscompany}} {{ document.datetime}}<h6>
+                    {% endif %}
+                </li>
+            {% endfor %}
+        </ul>
+    {% else %}
+    <p>No documents.</p>
+    {% endif %}
+
+    <div class="container">
+        <h2>페이지</h2>
+        <nav>
+            <ul class="pagination">
+                <li><a href="#"><span aria-hidden="true">«</span>
+                    <span class="sr-only">Previous</span></a></li>
+                <li><a href="#">1</a></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#">4</a></li>
+                <li><a href="#">5</a></li>
+                <li><a href="#">
+                    <span aria-hidden="true"></span>»<span class="sr-only">Next</span></a></li> </ul> </nav> </div>
+    </body>
+
+{% endblock main1 %}

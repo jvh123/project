@@ -1,0 +1,101 @@
+{% extends 'main.html' %}
+{% block main1 %}
+    <div id="content-container" class="container p-none">
+        <div class="side-p">
+            <form id="user-reg-form" action="." method="post">
+    {% csrf_token %}
+                <h3> 회원가입</h3>
+                <h5 class="sn-sh">양식에 맞게 입력해주십시오</h5>
+                <table class="table">
+                    <tbody>
+                        <tr>
+                            <th>{{ form.username.label }}</th>
+                            <th>{{ form.email.label }}</th>
+                        </tr>
+                        <tr>
+                            <td>{{ form.username }}</td>
+                            <td>{{ form.email }}</td>
+                        </tr>
+                        <tr>
+                            <td>{{ form.username.errors }}</td>
+                            <td>{{ form.email.errors }}</td>
+                        </tr>
+                        <tr>
+                            <th>패스워드</th>
+                            <th>Confirm Password</th>
+                        </tr>
+                        <tr>
+                            <td>{{ form.password1 }}</td>
+                            <td>{{ form.password2 }}</td>
+                        </tr>
+                        <tr>
+                            <td>{{ form.password1.errors }}</td>
+                            <td>{{ form.password2.errors }}</td>
+                        </tr>
+                    </tbody>
+                </table>
+                {# 과금을 위한 정보 입력 #}
+                <h5 class="sn-sh">추가정보 입력</h5>
+                <table class="table">
+                    <tbody>
+                        <tr>
+                            <th>{{ form.first_name.label }}</th>
+                            <th>{{ form.last_name.label }}</th>
+                        </tr>
+                        <tr>
+                            <td>{{ form.first_name }}</td>
+                            <td>{{ form.last_name }}</td>
+                        </tr>
+                        <tr>
+                            <td>{{ form.first_name.errors }}</td>
+                            <td>{{ form.last_name.errors }}</td>
+                        </tr>
+                        <tr>
+                            <th>{{ form.call_number.label }}</th>
+                            <th>{{ form.event1.label }}</th>
+                        </tr>
+                        <tr>
+                            <td>{{ form.call_number }}</td>
+                            <td>{{ form.event1 }}</td>
+                        </tr>
+                        <tr>
+                            <td>{{ form.call_number.errors }}</td>
+                            <td>{{ form.event1.errrors }}</td>
+                        </tr>
+                        <tr>
+                            <th>{{ form.event2.label }}</th>
+                            <th>{{ form.event3.label }}</th>
+                        </tr>
+                        <tr>
+                            <td>{{ form.event2 }}</td>
+                            <td>{{ form.event3 }}</td>
+                        </tr>
+                        <tr>
+                            <td>{{ form.event2.errors }}</td>
+                            <td>{{ form.event3.errors }}</td>
+                        </tr>
+                        <tr>
+                            <th>{{ form.email_check.label }}:  {{ form.email_check.0 }}{{ form.email_check.1 }}</th>
+                        </tr>
+                        <tr>
+                            <td>{{ form.email_check.errors }}</td>
+                        </tr>
+                    </tbody>
+                </table>
+                 <p><input type="submit" class="btn btn-default" value="Save"></p>
+            </form>
+        </div>
+    </div>
+{% endblock main1 %}
+{% block main2  %}
+    <script type="text/javascript" src="https://js.stripe.com/v2/"></script>
+    <script type="text/javascript">
+        jQuery(function($) {
+            $('#payment-form').submit(function(event) {
+            var $form = $(this);
+            $form.find('#payment-submit').prop('disabled', true);
+            return false;
+            });
+        });
+    </script>
+{% endblock main2 %}

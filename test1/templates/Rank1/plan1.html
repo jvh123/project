@@ -1,0 +1,161 @@
+{% extends "main.html" %}
+{% block main1 %}
+
+<style type="text/css">
+*{
+    margin:0;padding: 0;}
+li{
+    float: left;list-style: none;margin: 1px;}
+
+</style>
+<div id="page-wrapper">
+    <div class="row">
+        <div class="col-md-8">
+            <div class="panel-heading">
+                <h3 class="panel-title">년도 선택  설명</h3>
+            </div>
+            <div role="tabpanel">
+
+  <!-- Nav tabs -->
+  <ul class="list-group">
+    <li class="list-group-item" role="presentation"><a href="#2002" aria-controls="2002" role="tab" data-toggle="tab">2002</a></li>
+    <li class="list-group-item" role="presentation"><a href="#2003" aria-controls="2003" role="tab" data-toggle="tab">2003</a></li>
+    <li class="list-group-item" role="presentation"><a href="#2004" aria-controls="2004" role="tab" data-toggle="tab">2004</a></li>
+    <li class="list-group-item" role="presentation"><a href="#2005" aria-controls="2005" role="tab" data-toggle="tab">2005</a></li>
+      <li class="list-group-item" role="presentation"><a href="#2006" aria-controls="2006" role="tab" data-toggle="tab">2006</a></li>
+    <li class="list-group-item" role="presentation"><a href="#2007" aria-controls="2007" role="tab" data-toggle="tab">2007</a></li>
+    <li class="list-group-item" role="presentation"><a href="#2008" aria-controls="2008" role="tab" data-toggle="tab">2008</a></li>
+    <li class="list-group-item" role="presentation"><a href="#2009" aria-controls="2009" role="tab" data-toggle="tab">2009</a></li>
+      <li class="list-group-item" role="presentation"><a href="#2010" aria-controls="2010" role="tab" data-toggle="tab">2010</a></li>
+    <li class="list-group-item" role="presentation"><a href="#2011" aria-controls="2011" role="tab" data-toggle="tab">2011</a></li>
+    <li class="list-group-item" role="presentation"><a href="#2012" aria-controls="2012" role="tab" data-toggle="tab">2012</a></li>
+    <li class="list-group-item" role="presentation"><a href="#2013" aria-controls="2013" role="tab" data-toggle="tab">2013</a></li>
+      <li class="list-group-item" role="presentation"><a href="#2014" aria-controls="2014" role="tab" data-toggle="tab">2014</a></li>
+    <li class="list-group-item" role="presentation"><a href="#2015" aria-controls="2015" role="tab" data-toggle="tab">2015</a></li>
+    <li class="list-group-item" role="presentation"><a href="#2016" aria-controls="2016" role="tab" data-toggle="tab">2016</a></li>
+  </ul>
+            </div>
+        </div>
+  <!-- Tab panes -->
+        <div class="col-md-1">
+                <form id="user-reg-form" action="plans" method="post">
+                        {% csrf_token %}
+
+  <div class="tab-content">
+      <div class="panel-heading">
+                <h3 class="panel-title">분기 선택</h3>
+      </div>
+      <div role="tabpanel" class="tab-pane" id="2002"><li class="list-group-item">{{ form.Plan1.0 }}</li><li class="list-group-item">{{ form.Plan1.1 }}</li><li class="list-group-item">{{ form.Plan1.2 }}</li><li class="list-group-item">{{ form.Plan1.3 }}</li></div>
+      <div role="tabpanel" class="tab-pane" id="2003"><li class="list-group-item">{{ form.Plan1.4 }}</li><li class="list-group-item">{{ form.Plan1.5 }}</li><li class="list-group-item">{{ form.Plan1.6 }}</li><li class="list-group-item">{{ form.Plan1.7 }}</li></div>
+      <div role="tabpanel" class="tab-pane" id="2004"><li class="list-group-item">{{ form.Plan1.8 }}</li><li class="list-group-item">{{ form.Plan1.9 }}</li><li class="list-group-item">{{ form.Plan1.10 }}</li><li class="list-group-item">{{ form.Plan1.11 }}</li></div>
+      <div role="tabpanel" class="tab-pane" id="2005"><li class="list-group-item">{{ form.Plan1.12 }}</li><li class="list-group-item">{{ form.Plan1.13 }}</li><li class="list-group-item">{{ form.Plan1.14 }}</li><li class="list-group-item">{{ form.Plan1.15 }}</li></div>
+      <div role="tabpanel" class="tab-pane" id="2006"><li class="list-group-item">{{ form.Plan1.16 }}</li><li class="list-group-item">{{ form.Plan1.17 }}</li><li class="list-group-item">{{ form.Plan1.18 }}</li><li class="list-group-item">{{ form.Plan1.19 }}</li></div>
+      <div role="tabpanel" class="tab-pane" id="2007"><li class="list-group-item">{{ form.Plan1.20 }}</li><li class="list-group-item">{{ form.Plan1.21 }}</li><li class="list-group-item">{{ form.Plan1.22 }}</li><li class="list-group-item">{{ form.Plan1.23 }}</li></div>
+      <div role="tabpanel" class="tab-pane" id="2008"><li class="list-group-item">{{ form.Plan1.24 }}</li><li class="list-group-item">{{ form.Plan1.25 }}</li><li class="list-group-item">{{ form.Plan1.26 }}</li><li class="list-group-item">{{ form.Plan1.27}}</li></div>
+      <div role="tabpanel" class="tab-pane" id="2009"><li class="list-group-item">{{ form.Plan1.28 }}</li><li class="list-group-item">{{ form.Plan1.29 }}</li><li class="list-group-item">{{ form.Plan1.30 }}</li><li class="list-group-item">{{ form.Plan1.31 }}</li></div>
+      <div role="tabpanel" class="tab-pane" id="2010"><li class="list-group-item">{{ form.Plan1.32 }}</li><li class="list-group-item">{{ form.Plan1.33 }}</li><li class="list-group-item">{{ form.Plan1.34 }}</li><li class="list-group-item">{{ form.Plan1.35 }}</li></div>
+      <div role="tabpanel" class="tab-pane" id="2011"><li class="list-group-item">{{ form.Plan1.36 }}</li><li class="list-group-item">{{ form.Plan1.37 }}</li><li class="list-group-item">{{ form.Plan1.38 }}</li><li class="list-group-item">{{ form.Plan1.39 }}</li></div>
+      <div role="tabpanel" class="tab-pane" id="2012"><li class="list-group-item">{{ form.Plan1.40 }}</li><li class="list-group-item">{{ form.Plan1.41 }}</li><li class="list-group-item">{{ form.Plan1.42 }}</li><li class="list-group-item">{{ form.Plan1.43 }}</li></div>
+      <div role="tabpanel" class="tab-pane" id="2013"><li class="list-group-item">{{ form.Plan1.44 }}</li><li class="list-group-item">{{ form.Plan1.45 }}</li><li class="list-group-item">{{ form.Plan1.46 }}</li><li class="list-group-item">{{ form.Plan1.47 }}</li></div>
+      <div role="tabpanel" class="tab-pane" id="2014"><li class="list-group-item">{{ form.Plan1.48 }}</li><li class="list-group-item">{{ form.Plan1.49}}</li><li class="list-group-item">{{ form.Plan1.50 }}</li><li class="list-group-item">{{ form.Plan1.51 }}</li></div>
+      <div role="tabpanel" class="tab-pane" id="2015"><li class="list-group-item">{{ form.Plan1.52 }}</li><li class="list-group-item">{{ form.Plan1.53 }}</li><li class="list-group-item">{{ form.Plan1.54 }}</li><li class="list-group-item">{{ form.Plan1.55 }}</li></div>
+      <div role="tabpanel" class="tab-pane" id="2016"><li class="list-group-item">{{ form.Plan1.56 }}</li><li class="list-group-item">{{ form.Plan1.57 }}</li><li class="list-group-item">{{ form.Plan1.58 }}</li></div>
+  </div>
+        <p><input type="submit" class="btn btn-default" value="검색"></p>
+        </div>
+        </div>
+    <div class="row">
+        <div class="col-md-6">
+        <div class="panel-heading">
+                <h3 class="panel-title">    </h3>
+        </div>
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                <h3 class="panel-title"><i class="fa fa-bar-chart-o"></i> 2002~2016 수익률 그래프</h3>
+            </div>
+                <div class="panel-body">
+                    <div id="shieldui-chart1"></div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="panel-heading">
+                <h3 class="panel-title">    </h3>
+            </div>
+            <div class="span10">
+                {% if documents %}
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            <h3 class="panel-title"><i class="fa fa-bar-chart-o"></i> 분기별 기업코드/수익률 </h3>
+                        </div>
+                    <div class="panel-body">
+                    <div id="shieldui-grid1"></div>
+            </div>
+        </div>
+                {% else %}
+                <p>분기를 선택해주세요.</p>
+                {% endif %}
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+<script type="text/javascript">
+        jQuery(function ($) {
+            var performance = [
+                    {% for price in yearprice %}
+                        {{ price }},
+                    {% endfor %}
+                ],
+                traffic = [
+                    {% for document in documents %}
+                    {
+                        Rank: {{ document.ranknum }}, 기업코드:'{{document.name}}',수익률: {{document.price}}
+                    },
+                    {% endfor %}
+                    {% if a %}
+                    {
+                        Rank: '', 기업코드:"분기 평균 수익률:" , 수익률: {{ a }}
+                    }
+                    {% endif %}
+                ];
+
+
+            $("#shieldui-chart1").shieldChart({
+                theme: "dark",
+                axisX: {
+                categoricalValues: ["2002", "2003", "2004", "2005", "2006", "2007", "2008", "2009", "2010", "2011", "2012", "2013", "2014","2015","2016"]
+                },
+                primaryHeader: {
+                    text: "Visitors"
+                },
+                exportOptions: {
+                    image: false,
+                },
+                    print: false,
+                dataSeries: [{
+                    seriesType: "area",
+                    collectionAlias: "price",
+                    data: performance
+                }]
+            });
+            $("#shieldui-grid1").shieldGrid({
+                dataSource: {
+                    data: traffic
+                },
+                sorting: {
+                    multiple: true
+                },
+                rowHover: false,
+                paging: false,
+                columns: [
+                { field: "Rank", width: "170px", title: "Rank" },
+                { field: "기업코드", title: "기업코드" },
+                { field: "수익률", title: "수익률"},
+                ]
+            });
+        });
+    </script>
+{% endblock main1 %}
