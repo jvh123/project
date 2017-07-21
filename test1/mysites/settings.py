@@ -79,15 +79,15 @@ WSGI_APPLICATION = 'mysites.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/1.10/ref/settings/#databases
-
+#mysql 연결
 DATABASES = {
     'default': {
         #'ENGINE': 'django.db.backends.sqlite3',
         #'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
         'ENGINE':'django.db.backends.mysql',
         'NAME':'mysites',
-        'USER':'root',
-        'PASSWORD':'wjd3285',
+        'USER':'',
+        'PASSWORD':'',
         'HOST':'localhost',
         'PORT':'3306',
         'default-character-set':'utf8',
@@ -97,16 +97,16 @@ DATABASES = {
         },
     }
 }
-#아마존 db연결
+#아마존 AWS db연결
 # DATABASES = {
 #     'default': {
 #         #'ENGINE': 'django.db.backends.sqlite3',
 #         #'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
 #         'ENGINE':'django.db.backends.mysql',
 #         'NAME':'mysites',
-#         'USER':'root',
-#         'PASSWORD':'wjd3285!',
-#         'HOST':'jvh123.c6hakphiaxs4.us-west-2.rds.amazonaws.com',
+#         'USER':'',
+#         'PASSWORD':'',
+#         'HOST':'',
 #         'PORT':'3306',
 #         'default-character-set':'utf8',
 #         'OPTIONS':{
